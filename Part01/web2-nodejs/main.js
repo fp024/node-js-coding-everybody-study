@@ -1,17 +1,26 @@
 var http = require("http");
 var fs = require("fs");
-var app = http.createServer(function (request, response) {
-  var url = request.url;
-  if (request.url == "/") {
-    url = "/index.html";
-  }
+var url = require("url");
 
-  if (request.url == "/favicon.ico") {
+var app = http.createServer(function (request, response) {
+  var _url = request.url;
+  var queryData = url.parse(_url, true).query;
+
+  if (_url == "/favicon.ico") {
     return response.writeHead(404);
   }
 
+  console.log("url: ", _url);
+  console.log("queryData:  ", queryData);
+  console.log("queryData.id:  ", queryData.id);
+
+  if (_url == "/") {
+    _url = "/index.html";
+  }
+
   response.writeHead(200);
-  console.log(__dirname + url);
-  response.end(fs.readFileSync(__dirname + url));
+  response.end(queryData.id);
+  // console.log(__dirname + _url);
+  // response.end(fs.readFileSync(__dirname + _url));
 });
 app.listen(3000); // 웹 포트 설정
