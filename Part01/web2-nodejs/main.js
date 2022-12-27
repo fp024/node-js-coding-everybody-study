@@ -1,19 +1,19 @@
-var http = require("http");
-var fs = require("fs");
-var url = require("url");
+var http = require('http');
+var fs = require('fs');
+var url = require('url');
 
 var app = http.createServer(function (request, response) {
   var _url = request.url;
-  if (_url == "/favicon.ico") {
+  if (_url == '/favicon.ico') {
     return response.writeHead(404);
   }
 
   var queryData = url.parse(_url, true).query;
   var title = queryData.id;
-  console.log("url:", _url);
+  console.log('url:', _url);
 
-  if (_url == "/") {
-    title = "Welcome";
+  if (_url == '/') {
+    title = 'Welcome';
   }
 
   response.writeHead(200);
