@@ -90,8 +90,11 @@ var app = http.createServer(function (request, response) {
       var post = qs.parse(body);
       var title = post.title;
       var description = post.description;
-      console.log('title:', title);
-      console.log('description:', description);
+      fs.writeFile(`data/${title}`, description, 'utf8', function (err) {
+        var encodeTitle = encodeURI(title);
+        response.writeHead(302, { Location: `/?id=${encodeTitle}` });
+        response.end('success');
+      });
     });
   } else {
     response.writeHead(404);

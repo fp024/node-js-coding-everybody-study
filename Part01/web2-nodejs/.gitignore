@@ -1,2 +1,7 @@
+!data/CSS
+!data/HTML
+!data/JavaScript
+!data/Nodejs
+data/*
 .vscode
 *.log
