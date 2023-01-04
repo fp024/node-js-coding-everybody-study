@@ -5,3 +5,4 @@
 data/*
 .vscode
 *.log
+node_modules
