@@ -1,0 +1,17 @@
+{
+  // https://cspell.org/
+  "version": "0.2",
+  "ignorePaths": [
+    "/.vscode/**",
+    "/.gitignore",
+    "/pnpm-lock.yaml"
+  ],
+  "words": [
+
+  ],
+  "ignoreWords": [
+    "filelist",
+    "mpart"
+  ],
+  "import": []
+}

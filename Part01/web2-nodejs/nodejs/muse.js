@@ -1,2 +1,2 @@
-var part = require('./mpart.js');
+const part = require('./mpart.js');
 part.f();

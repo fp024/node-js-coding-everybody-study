@@ -3,6 +3,5 @@
 !data/JavaScript
 !data/Nodejs
 data/*
-.vscode
 *.log
 node_modules
