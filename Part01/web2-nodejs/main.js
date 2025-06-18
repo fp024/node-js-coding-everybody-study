@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const url = require('url');
+const { URL } = require('url');
 const qs = require('querystring');
 const template = require('./lib/template.js');
 const path = require('path');
@@ -8,8 +8,9 @@ const sanitizeHtml = require('sanitize-html');
 
 const app = http.createServer(function (request, response) {
   const _url = request.url;
-  const queryData = url.parse(_url, true).query;
-  const pathname = url.parse(_url, true).pathname;
+  const _myURL = new URL(_url, `http://${request.headers.host}`);
+  const queryData = Object.fromEntries(_myURL.searchParams.entries());
+  const pathname = _myURL.pathname;
 
   if (pathname === '/') {
     if (queryData.id === undefined) {
