@@ -1,7 +1,4 @@
-!data/CSS
-!data/HTML
-!data/JavaScript
-!data/Nodejs
+.idea
 data/*
 *.log
 node_modules
