@@ -2,14 +2,15 @@
   "name": "web2-nodejs-ts",
   "version": "1.0.0",
   "description": "생활코딩 Node.js - 1장 예제 TS 변환",
-  "main": "main.js",
+  "main": "dist/main.js",
   "private": true,
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "preinstall": "pnpm dlx only-allow pnpm",
-    "start": "node main.js",
+    "build": "tsc",
+    "start": "pnpm run build && node dist/main.js",
     "reset-data": "node scripts/reset-data.js",
     "start:reset": "pnpm run reset-data && pnpm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,6 +22,9 @@
     "sanitize-html": "^2.17.6"
   },
   "devDependencies": {
-    "prettier": "^3.9.6"
+    "@types/node": "^26.1.2",
+    "@types/sanitize-html": "^2.16.1",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2"
   }
 }
