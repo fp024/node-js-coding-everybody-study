@@ -1,0 +1,26 @@
+{
+  "name": "web2-nodejs-ts",
+  "version": "1.0.0",
+  "description": "생활코딩 Node.js - 1장 예제 TS 변환",
+  "main": "main.js",
+  "private": true,
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "preinstall": "pnpm dlx only-allow pnpm",
+    "start": "node main.js",
+    "reset-data": "node scripts/reset-data.js",
+    "start:reset": "pnpm run reset-data && pnpm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee",
+  "dependencies": {
+    "sanitize-html": "^2.17.6"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}
