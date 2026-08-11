@@ -1,5 +1,11 @@
-const fs = require('fs');
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-fs.readFile('sample.txt', 'utf-8', function (err, data) {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const filePath = path.join(__dirname, 'sample.txt');
+
+fs.readFile(filePath, 'utf-8', function (err, data) {
   console.log(data);
 });

@@ -2,5 +2,7 @@
   "[javascript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  // Code Runner 실행 기준 폴더를 파일 위치로 변경
+  "code-runner.fileDirectoryAsCwd": true
 }

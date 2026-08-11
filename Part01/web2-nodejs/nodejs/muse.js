@@ -1,2 +1,2 @@
-const part = require('./mpart.js');
+import part from './mpart.js';
 part.f();

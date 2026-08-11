@@ -1,5 +1,5 @@
 const testFolder = '../data';
-const fs = require('fs');
+import fs from 'node:fs';
 
 fs.readdir(testFolder, function (error, filelist) {
   console.log(filelist);

@@ -5,4 +5,4 @@ const M = {
   },
 };
 
-module.exports = M;
+export default M;
