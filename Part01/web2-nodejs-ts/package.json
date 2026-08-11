@@ -4,6 +4,7 @@
   "description": "생활코딩 Node.js - 1장 예제 TS 변환",
   "main": "dist/main.js",
   "private": true,
+  "type": "module",
   "directories": {
     "lib": "lib"
   },

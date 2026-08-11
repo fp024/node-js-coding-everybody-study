@@ -1,10 +1,10 @@
-const http = require('http');
-const fs = require('fs');
-const { URL } = require('url');
-const qs = require('querystring');
-const template = require('./lib/template.js');
-const path = require('path');
-const sanitizeHtml = require('sanitize-html');
+import http from 'node:http';
+import fs from 'node:fs';
+import { URL } from 'node:url';
+import qs from 'node:querystring';
+import path from 'node:path';
+import sanitizeHtml from 'sanitize-html';
+import template from './lib/template.js';
 
 const app = http.createServer(function (request, response) {
   const _url = request.url;

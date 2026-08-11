@@ -4,7 +4,7 @@ import { URL } from 'url';
 import qs from 'querystring';
 import path from 'path';
 import sanitizeHtml from 'sanitize-html';
-import * as template from './lib/template';
+import * as template from './lib/template.js';
 
 type QueryValue = string | string[] | undefined;
 
